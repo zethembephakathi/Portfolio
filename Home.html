@@ -1,0 +1,287 @@
+<!DOCTYPE html>  
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Portfolio Website Design</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Font awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+    <style>
+             body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: white;
+            background: linear-gradient(135deg, #ff4d8d, #1a1a1a, #ff85c1);
+            background-size: 300% 300%;
+            animation: gradientAnimation 10s infinite;
+        }
+
+        @keyframes gradientAnimation {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        header {
+            background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black */
+            color: white;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+
+        .logo-circle {
+            background-color: #ff007f;
+            color: #fff;
+            padding: 10px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .navlinks {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .navlinks li {
+            display: inline-block;
+            margin: 0 10px;
+        }
+
+        .navlinks a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px;
+            transition: color 0.3s ease-in-out;
+        }
+
+        .navlinks a:hover {
+            color: #ff007f;
+        }
+
+        .btn {
+            background-color: #ff007f;
+            color: #fff;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 600;
+            margin-right: 10px;
+            display: inline-block;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .btn:hover {
+            background-color: #e60073;
+        }
+
+        .social a {
+            color: #fff;
+            margin-right: 15px;
+            font-size: 20px;
+            text-decoration: none;
+            display: inline-block;
+            transition: color 0.3s ease-in-out;
+        }
+
+        .social a:hover {
+            color: #ff007f;
+        }
+
+        .hero-text h5 {
+            color: #fff;
+        }
+
+        .hero-text h1 {
+            color: #ff007f;
+        }
+
+        .btn-group {
+            margin-top: 20px;
+        }
+
+        .social {
+            margin-top: 20px;
+        }
+
+        /* Responsive Nav */
+        .togglebtn {
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 30px;
+            height: 25px;
+        }
+
+        .togglebtn span {
+            background-color: #fff;
+            height: 3px;
+            margin: 3px 0;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        .togglebtn.click span:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+
+        .togglebtn.click span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .togglebtn.click span:nth-child(3) {
+            transform: rotate(-45deg) translate(5px, -5px);
+        }
+
+        .navlinks.open {
+            display: block;
+            background-color: #1a1a1a;
+            position: absolute;
+            top: 60px;
+            right: 0;
+            width: 200px;
+            padding: 10px 20px;
+            border-radius: 10px;
+        }
+
+        .navlinks li {
+            display: block;
+            padding: 10px 0;
+        }
+
+        .navlinks li a {
+            padding: 10px;
+            display: block;
+        }
+
+        /* Hero Section */
+        .hero-header {
+            background-color: #1a1a1a;
+            padding: 60px 20px;
+        }
+
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .hero-pic img {
+            max-width: 300px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+        }
+
+        .hero-text {
+            max-width: 600px;
+        }
+
+        .hero-text p {
+            margin-top: 20px;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        /* Responsive Hero */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .btn-group {
+                margin-top: 10px;
+            }
+
+            .hero-pic img {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+  <div class="hero-header">
+        <div class="wrapper">
+            <header>
+             <div class="logo">
+                <div class="logo-circle">ZAP</div>
+                <span class="logo-text">Zethembe Alwande Phakathi</span>
+            </div>
+                <nav>
+                    <div class="togglebtn">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <ul class="navlinks">
+                        <li><a href="Home.html">Home</a></li>
+                        <li><a href="Portfolio.html">Portfolio</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="Contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <div class="container">
+                 <div class="hero-pic">
+                    <img src="images/main_photo.jpeg" alt="profile pic">
+                 </div>
+                 <div class="hero-text">
+                    <h5>Hi I'm <span class="input">Frontend Developer</span></h5>
+                    <h1>Zethembe</h1>
+                    <p>a passionate software developer dedicated to crafting innovative digital solutions. Explore my portfolio to learn about my skills, projects, and how I can bring value to your team or business.
+
+                    Let’s create something extraordinary together!
+                    </p>
+
+                    <div class="btn-group">
+                       <a href="CV/CURRICULUM VITAE OF ZETHEMBE PHAKATHI.pdf" class="btn active">Download CV</a>
+                       <a href="Contact.html" class="btn">Contact</a>
+                    </div>
+
+                    <div class="social">
+                        <a href="https://www.facebook.com/alwande.phakathi.923"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="https://www.linkedin.com/in/zethembe-phakathi"><i class="fa-brands fa-linkedin"></i></a>
+                        
+                    </div>
+                 </div>
+            </div>
+        </div>
+     </div>
+     <!-- Typed.js for typing text effect -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.10/typed.min.js"></script>
+     <script>
+        /** Show/hide navbar **/
+        var togglebtn = document.querySelector(".togglebtn");
+        var nav = document.querySelector(".navlinks");
+
+        togglebtn.addEventListener("click", function () {
+            this.classList.toggle("click");
+            nav.classList.toggle("open");
+        });
+
+        var typed = new Typed(".input", {
+            strings: ["Frontend Developer", "Web Developer"],
+            typeSpeed: 70,
+            backSpeed: 55,
+            loop: true
+        });
+     </script>
+</body>
+</html>

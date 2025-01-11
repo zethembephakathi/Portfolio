@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zethembe Alwande Phakathi - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <style>
+        /* General Body and Background Styling */
+        body {
+            background: linear-gradient(45deg, #ff007f 25%, #000 50%, #ff007f 75%);
+            background-size: 400% 400%;
+            animation: backgroundAnimation 6s ease-in-out infinite;
+            color: #fff;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        /* Animation for the "paint-like" background */
+        @keyframes backgroundAnimation {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Projects Section */
+        .projects-section {
+            background: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+            padding: 40px 0;
+        }
+
+        .projects-container {
+            background-color: rgba(255, 192, 203, 0.1); /* Pink semi-transparent background */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .projects-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        /* Adjusted project card to be more square */
+        .project-box {
+            background-color: #222;
+            padding: 10px;
+            border-radius: 10px;
+            width: calc(33% - 15px); /* Three projects per row */
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            transition: transform 0.3s;
+        }
+
+        .project-box:hover {
+            transform: scale(1.05);
+            background-color: rgba(255, 192, 203, 0.2); /* Pink background on hover */
+        }
+
+        .project-btn {
+            background-color: #ff007f; /* Pink button */
+            color: #fff;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .project-btn:hover {
+            background-color: #e60073;
+        }
+
+        /* GitHub Projects Section */
+        .github-projects {
+            text-align: center;
+            padding: 40px 20px;
+            background-color: #222;
+            margin-top: 30px;
+        }
+
+        .github-projects h2 {
+            color: white;
+            margin-bottom: 20px;
+        }
+
+        .github-projects p {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        .github-link {
+            background-color: #ff007f;
+            color: #fff;
+            padding: 12px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .github-link:hover {
+            background-color: #e60073;
+        }
+
+        /* Skills Section: Smaller Skill Cards */
+        .skills-section {
+            background: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+            padding: 40px 0;
+        }
+
+        .skills-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: space-between;
+        }
+
+        .skill-card {
+            background-color: #222;
+            padding: 10px;
+            border-radius: 10px;
+            width: calc(20% - 10px); /* 5 skill cards per row */
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            transition: transform 0.3s;
+        }
+
+        .skill-card:hover {
+            transform: scale(1.05);
+            background-color: rgba(255, 192, 203, 0.2);
+        }
+
+        .skill-card img {
+            max-width: 60px;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+
+        h1 {
+            color: white;
+            margin-bottom: 20px;
+        }
+
+        footer {
+            background-color: #222;
+            padding: 20px;
+            text-align: center;
+            color: #fff;
+        }
+
+        .social-icons a {
+            color: #fff;
+            margin: 0 10px;
+            font-size: 20px;
+            transition: color 0.3s ease-in-out;
+        }
+
+        .social-icons a:hover {
+            color: #ff007f;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <div class="logo-circle">ZAP</div>
+            <span class="logo-text">Zethembe Alwande Phakathi</span>
+        </div>
+        <nav>
+            <ul class="navlinks">
+                <li><a href="Home.html">Home</a></li>
+                <li><a href="Portfolio.html">Portfolio</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="Contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="projects-section">
+        <div class="wrapper">
+            <h1>Featured Projects</h1>
+            <div class="projects-container">
+                <div class="project-box">
+                    <h2>NGO Mobile App</h2>
+                    <p>Developed a mobile app using Java and Firebase to manage volunteers, events, and donations for NGOs. Integrated a permit management system for streamlined authorization.</p>
+                    <a href="https://github.com/zethembephakathi/CoRMSA" class="project-btn" target="_blank">View Project</a>
+                </div>
+                <div class="project-box">
+                    <h2>Craft Business Advertisement Web App</h2>
+                    <p>Created an ASP.NET MVC web app to promote craft businesses, featuring product listings, order forms, and customer inquiry integration. Deployed on Azure for scalability.</p>
+                    <a href="https://github.com/zethembephakathi/POE_DisasterProject" class="project-btn" target="_blank">View Project</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="github-projects">
+        <h2>More Projects</h2>
+        <p>For more projects and code repositories, check out my GitHub page where I showcase a wide range of work, including personal projects, collaborations, and experiments.</p>
+        <a href="https://github.com/zethembephakathi" class="github-link" target="_blank">Visit My GitHub</a>
+    </div>
+
+    <div class="skills-section">
+        <div class="wrapper">
+            <h1>Skills</h1>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <img src="images/java.png" alt="Java">
+                    <p>Java</p>
+                </div>
+                <div class="skill-card">
+                    <img src="images/html.png" alt="HTML">
+                    <p>HTML</p>
+                </div>
+                <div class="skill-card">
+                    <img src="images/css.png" alt="CSS">
+                    <p>CSS</p>
+                </div>
+                <div class="skill-card">
+                    <img src="images/php.png" alt="PHP">
+                    <p>PHP</p>
+                </div>
+                <div class="skill-card">
+                    <img src="images/sql.png" alt="SQL">
+                    <p>SQL</p>
+                </div>
+                <div class="skill-card">
+                    <img src="images/firebase.png" alt="Firebase">
+                    <p>Firebase</p>
+                </div>
+                <div class="skill-card">
+                    <img src="images/kotlin.png" alt="Kotlin">
+                   
